@@ -13,15 +13,30 @@ const Shop = () => {
     }
 
     useEffect(() => {
-        const storedCart = getShoppingCart();
-        console.log(storedCart)
-    }, [])
-
-    useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
+    useEffect(() => {
+
+        const storedCart = getShoppingCart();
+        let saveCart = [];
+        for (const id in storedCart) {
+
+            const addedProduct = products.find(product => product.id === id)
+            if (addedProduct) {
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                saveCart.push(addedProduct)
+
+            }
+            console.log('added product', addedProduct)
+
+        }
+        console.log(cart);
+        setCart(saveCart);
+    }, [products])
 
     return (
         <div className='shop-container'>
