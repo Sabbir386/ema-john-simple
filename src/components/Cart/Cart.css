@@ -8,3 +8,16 @@
     position: sticky;
     top: 0;
 }
+
+.btn-clear-cart {
+    width: 90%;
+    font-size: 21px;
+    height: 56px;
+    margin: 10px auto;
+    background: #FF3030;
+    border-bottom: 4px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
