@@ -1,0 +1,33 @@
+.review-item {
+    width: 571px;
+    height: 107px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 8px;
+    display: flex;
+    ;
+
+
+}
+
+.review-details {
+    flex-grow: 1
+}
+
+.review-details p {
+    margin: 0 15px;
+}
+
+.review-item .product-title {
+    font-weight: 400px;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+}
+
+.review-item img {
+    width: 91px;
+    height: 91px;
+
+}
